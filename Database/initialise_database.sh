@@ -1,5 +1,7 @@
 # If you don't have the files for sqlite it won't work!
 # Download them there: https://www.sqlite.org/download.html
+# If your ubuntu doesn't want to work with this file 
+# make the script file executable again!
 
 #!/bin/sh
 
