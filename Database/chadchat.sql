@@ -81,7 +81,6 @@ CREATE TABLE IF NOT EXISTS "chatRoom" (
 	"thread_id"	INTEGER NOT NULL,
 	"user_id"	INTEGER NOT NULL,
 	"joinedAt"	TEXT NOT NULL,
-	"canSpeak"	INTEGER,
 	"isMute"	INTEGER,
 	"isDeleted"	INTEGER,
 	PRIMARY KEY("id"),
