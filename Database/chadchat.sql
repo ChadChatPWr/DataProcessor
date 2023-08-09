@@ -64,6 +64,7 @@ CREATE TABLE IF NOT EXISTS "userProfile" (
 	"lastName"	VARCHAR(60),
 	"note"	VARCHAR(100),
 	"otp"	INTEGER NOT NULL,
+	"lastLogin" TEXT NOT NULL,
 	"isDeleted"	INTEGER,
 	PRIMARY KEY("id")
 );
@@ -134,3 +135,11 @@ CREATE TABLE IF NOT EXISTS "roles" (
 	PRIMARY KEY("user_id"),
 	FOREIGN KEY("user_id") REFERENCES "userProfile"("id")
 );
+CREATE TABLE IF NOT EXISTS "archive" {
+	"id"	INTEGER,
+	"user_id"	INTEGER NOT NULL,
+	"created"	TEXT NOT NULL,
+	"isDeleted"	INTEGER,
+	PRIMARY KEY("id"),
+	FOREIGN KEY("user_id") REFERENCES "userProfile"("id")
+}
