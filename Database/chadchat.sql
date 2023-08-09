@@ -37,13 +37,11 @@ CREATE TABLE IF NOT EXISTS "settings" (
 );
 CREATE TABLE IF NOT EXISTS "verify" (
 	"id"	INTEGER,
-	"user_email"	varchar(100) NOT NULL,
-	"user_id"	INTEGER NOT NULL,
+	"email"	VARCHAR(100) NOT NULL,
+	"username"	VARCHAR(20) NOT NULL,
 	"created"	TEXT NOT NULL,
 	"code"	VARCHAR(6) NOT NULL,
 	"isDeleted"	INTEGER,
-	FOREIGN KEY("user_email") REFERENCES "userProfile"("email"),
-	FOREIGN KEY("user_id") REFERENCES "userProfile"("id"),
 	PRIMARY KEY("id")
 );
 CREATE TABLE IF NOT EXISTS "userSettings" (
@@ -59,6 +57,7 @@ CREATE TABLE IF NOT EXISTS "userSettings" (
 CREATE TABLE IF NOT EXISTS "userProfile" (
 	"id"	INTEGER,
 	"email"	VARCHAR(100) NOT NULL,
+	"username"	VARCHAR(20) NOT NULL,
 	"created"	TEXT NOT NULL,
 	"avatarLink"	VARCHAR(100),
 	"firstName"	VARCHAR(30),
